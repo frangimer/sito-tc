@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Tennis Club Rionero</title>
+    <link rel="stylesheet" type="text/css" href="stile/style.css">
+    <link rel="icon" type="image/png" href="logo\favicon1.png">
+</head>
+
+<body>
+    <header>
+        <img id="logo_sito" src="logo/logoBiancoTcRionero.png" alt="Logo" class="logo">
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novita.html">Novità</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="storia.html">Storia</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="#" id="link_mappa">Dove siamo</a></li>
+                <li><a href="https://tcrionero.wansport.com">Prenota campo</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul id="mobile-menu" class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novita.html">Novità</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="storia.html">Storia</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="eventi.html">Eventi</a></li>
+                <li><a href="https://tcrionero.wansport.com">Prenota campo</a></li>
+            </ul>
+        </nav>
+
+        <button id="contact">Contattaci</button>
+    </header>
+
+    <div class="container">
+        <div class="mySlides">
+            <img src="immagini/Snapshot.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <img src="immagini/Snapshot_1.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="immagini/Snapshot_2.png" style="width:100%">
+        </div>
+
+    </div>
+        <h1>ULTIME NEWS</h1>
+
+                <div id="news">
+                    <div class="novita">
+                        <img src="immagini/campo.jpg" alt="Campo">
+                        <p>Questo è il primo</p>
+                    </div>
+                    <div class="novita">
+                        <img src="immagini/torneo.jpg" alt="Torneo Fit">
+                        <p>Torneo di IV Categoria <br>
+                            Dal 3 al 16 Novembre 2024
+                        </p>                                  
+                    </div>
+                    <div class="novita"></div>
+            </div>
+        
+        <div id="mappa" class="google-maps">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6029.5400508696775!2d15.662372217837182!3d40.92078808355077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1339a9006b0934a5%3A0x4fb6ec563fdc214c!2sTennis%20Club%20Rionero!5e0!3m2!1sit!2sit!4v1742207359513!5m2!1sit!2sit"
+                width="100%" 
+                height="600" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>        
+            <div class="container_prenota_campo">
+                <h2> Prenota ora il tuo campo </h2>
+                <img src="immagini/campo222.jpg" alt="Immagine di esempio">
+                <button id="bottone_prenota" class="centered-button">Clicca qui</button>
+            </div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-section">
+            <p>&copy; 2025 Tc Rionero. Tutti i diritti riservati.</p>
+        </div>
+
+        <!-- Sezione 2: Link utili -->
+        <div class="footer-links">
+            <ul>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/terms-of-service">Termini di Servizio</a></li>
+                <li><a href="/about">Chi siamo</a></li>
+            </ul>
+            <ul>
+                <li><a href="/services">Servizi</a></li>
+                <li><a href="/contact">Contatti</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <p>Contattaci: <a href="mailto:tennisclubrionero@gmail.com">tennisclubrionero@gmail</a></p>
+            <p>Telefono: +39 392 964 5111</p>
+        </div>
+
+        <div class="footer-social">
+            <ul>
+                <li><a href="https://facebook.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a></li>
+                <li><a href="https://instagram.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+                </a></li>
+            </ul>
+        </div>
+
+        <div class="footer-design">
+            <p>Design e sviluppo da <a href="https://www.tuo-sito.com">Francesco Laus</a></p>
+        </div>
+    </footer>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
+
