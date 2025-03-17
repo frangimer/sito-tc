@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
 }
 
 h1 {
@@ -31,38 +32,28 @@ header {
     background-color: rgba(10, 10, 10, 0.6);
     padding: 20px 3%;
     height: 180px;
-    transition: all 0s ease;
     z-index: 1000; /* Assicura che la navbar sia sopra tutto */
-
 }
 
 header img {
     width: 200px;
-    transition: all 0s ease;
 }
 
-@media (min-width: 769px) {
-    header.scrolled {
-        height: 120px;
-        padding: 10px 3%;
-        background-color: rgba(30, 30, 30, 0.8);
-    }
-
-    header.scrolled .menu,
-    header.scrolled a,
-    header.scrolled button {
-        color: white;
-    }
-
-    header.scrolled img {
-        width: 150px;
-        padding-left: 20px;
-    }
+header.scrolled {
+    height: 120px;
+    padding: 10px 3%;
+    background-color: rgba(30, 30, 30, 0.8);
 }
 
-header {
-    background-color: rgba(30, 30, 30, 0.6);
-    height: 180px; 
+header.scrolled .menu,
+header.scrolled a,
+header.scrolled button {
+    color: white;
+}
+
+header.scrolled img {
+    width: 150px;
+    padding-left: 20px;
 }
 
 .menu {
@@ -72,10 +63,6 @@ header {
 
 .menu li {
     padding: 0 20px;
-}
-
-.menu li a {
-    transition: all 0s ease;
 }
 
 .menu a:hover {
@@ -96,18 +83,17 @@ button:hover {
     color: #2AA876;
 }
 
-
-.mySlides img {
-    width: 100%;
-    height: auto;
-}
-
 .container {
-    flex-direction: row;
-    flex-grow: 1;
+    width: 100%;
+    height: 880px; /* Puoi cambiare questa altezza in base alle necessità */
+    display: flex;
+    background-color: transparent;
+    overflow: hidden; /* Nasconde eventuali parti eccedenti dell'immagine */
+    border: none;
 }
 
-.container img {
+.container .mySlides img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -133,7 +119,6 @@ button:hover {
     height: 90%;
 }
 
-/* Stile per il contenitore */
 .container_prenota_campo {
     position: relative; /* Contenitore relativo per posizionare il pulsante in modo assoluto */
     display: inline-block; /* Adatta il contenitore alle dimensioni dell'immagine */
@@ -311,6 +296,89 @@ button {
 
 
 
+@media (max-width: 769px) {
+    body {
+        background-color: rgba(30, 30, 30, 1);
+        color: darkgreen;
+        overflow-x: hidden;
+    }
+
+    header {
+        text-align: center;
+    }
+    
+    .menu li {
+        padding: 0 12px;
+    }
+
+    #contact {
+        display: none;
+    }
+
+    .container {
+        height: auto; /* Puoi cambiare questa altezza in base alle necessità */
+        width: 100%;        
+    }
+
+    #news {
+        height: 500px;
+        display: none;
+        flex-direction: row;
+    }
+    .novita {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    margin-left: 10px;
+    }
+
+    .novita img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    }
+
+        /* Stile per il contenitore */
+    .container_prenota_campo {
+        position: relative; /* Contenitore relativo per posizionare il pulsante in modo assoluto */
+        display: inline-block; /* Adatta il contenitore alle dimensioni dell'immagine */
+        width: 100%; /* Larghezza dell'immagine */
+        height: auto; /* Altezza automatica per mantenere le proporzioni */
+    }
+
+    /* Stile per l'immagine */
+    .container_prenota_campo img {
+        width: 100%; /* Larghezza dell'immagine */
+        height: 200px; /* Altezza automatica per mantenere le proporzioni */
+        object-fit: cover;
+    }
+
+    .container_prenota_campo .centered-button {
+        position: absolute; /* Posizionamento assoluto rispetto al contenitore */
+        top: 60%; /* Posizione verticale al 50% */
+        left: 30%; /* Posizione orizzontale al 50% */
+        transform: translate(-50%, -50%); /* Centra precisamente il pulsante */
+        background-color: #4CAF50; /* Colore di sfondo */
+        color: white; /* Colore del testo */
+        padding: 15px 25px; /* Spaziatura interna */
+        font-size: 1rem; /* Dimensione del testo */
+        border: none; /* Rimuove il bordo */
+        cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    }
+
+
+    .container_prenota_campo h2 {
+        position: absolute;
+        top: 30%; /* Posizione verticale al 50% */
+        left: 30%; /* Posizione orizzontale al 50% */
+        transform: translate(-50%, -50%); /* Centra precisamente il pulsante */
+        color: white; /* Colore del testo */
+        padding: 15px 25px; /* Spaziatura interna */
+        font-size: 1rem; /* Dimensione del testo */
+    }
+
+}
+
 /* Media query per dispositivi con larghezza massima di 480px (smartphone) */
 @media (max-width: 480px) {
     body {
@@ -386,8 +454,11 @@ button {
     }
 
     .container {
-        width: 100%;
+        height: auto; /* Puoi cambiare questa altezza in base alle necessità */
+        width: 100%;        
     }
+
+
 
     #news {
         height: 500px;
@@ -447,4 +518,3 @@ button {
     }
 
 }
-
